@@ -34,7 +34,7 @@
     
     //设置是否可以滚动
     //UITextView继承于UIScrollView
-    _textView.scrollEnabled = NO;
+    _textView.scrollEnabled = YES;
     
     //UITextView 下得键盘中return 表示换行
     [self.view addSubview:_textView];

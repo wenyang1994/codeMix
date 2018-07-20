@@ -31,6 +31,7 @@
     _tableView.dataSource = self;
     [self.view addSubview:_tableView];
     [self getNetData];
+    [self getChapterInfo];
     _timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(Timered) userInfo:nil repeats:YES];
     [[NSRunLoop mainRunLoop] addTimer:_timer forMode:NSDefaultRunLoopMode];
     // Do any additional setup after loading the view, typically from a nib.
@@ -96,7 +97,8 @@
     
     if(result.count>0){
         ContentViewController *content = [[ContentViewController alloc]init];
-        content.resultText = result[@"content"];
+        NSString *string = [NSString stringWithFormat:@"%@ \n%@",result[@"content"],result[@"translation"]];
+        content.resultText = string;
         
         [self.navigationController pushViewController:content animated:YES];
         
@@ -126,6 +128,45 @@
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
         
         result = dic[@"result"];
+        CFRunLoopStop(CFRunLoopGetMain());
+    }];
+    
+    //7.执行任务
+    [dataTask resume];
+    CFRunLoopRun();
+    
+    return result;
+}
+
+
+-(NSDictionary *)getChapterInfo{
+    //第一步，创建URL
+//    NSURL *url = [NSURL URLWithString:@"http://218.17.35.130:9081/dm/ddcx/1001"];
+    NSURL *url = [NSURL URLWithString:@"http://218.17.35.130:9081/dm/ddcx/1002"];
+    //第二步，创建请求
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc]initWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
+    
+    [request setHTTPMethod:@"POST"];
+    
+//    NSString *name = @"";
+    NSString *userId = @"201807020956017817";
+//    NSString *urlString = [name stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]];
+    
+    //之前方法
+//    NSString *urlString2 = [name stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    
+    NSDictionary *bodyDic = @{@"userId":userId};
+//    NSDictionary *bodyDic = @{@"token":@"aaa",@"username":urlString,@"password":@"123456"};
+    
+    NSData *bodyData = [NSJSONSerialization dataWithJSONObject:bodyDic options:NSJSONWritingPrettyPrinted error:nil];
+    [request setHTTPBody:bodyData];
+    
+    __block NSDictionary *result;
+    
+    NSURLSessionDataTask *dataTask = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error){
+        
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+        
         CFRunLoopStop(CFRunLoopGetMain());
     }];
     

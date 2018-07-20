@@ -19,10 +19,13 @@
     // Override point for customization after application launch.
     
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    UITabBarController *tabVC = [[UITabBarController alloc]init];
     
     ViewController *mainView = [[ViewController alloc]init];
+    mainView.tabBarItem.title = @"道德经";
+    [tabVC addChildViewController:mainView ];
     
-    UINavigationController *navi = [[UINavigationController alloc]initWithRootViewController:mainView];
+    UINavigationController *navi = [[UINavigationController alloc]initWithRootViewController:tabVC];
     
     [self.window setRootViewController:navi];
     [self.window makeKeyAndVisible];
