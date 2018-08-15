@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C2B91252124145C009777A8 /* BetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2B91232124145C009777A8 /* BetViewController.m */; };
+		9C2B91262124145C009777A8 /* BetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C2B91242124145C009777A8 /* BetViewController.xib */; };
+		9C2B912A21241871009777A8 /* PDFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2B912821241871009777A8 /* PDFViewController.m */; };
+		9C2B912B21241871009777A8 /* PDFViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C2B912921241871009777A8 /* PDFViewController.xib */; };
 		9C3C77A121008C8800C33569 /* ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3C77A021008C8800C33569 /* ContentViewController.m */; };
 		9CB046ED20FF12C800FCC181 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB046EC20FF12C800FCC181 /* AppDelegate.m */; };
 		9CB046F020FF12C800FCC181 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB046EF20FF12C800FCC181 /* ViewController.m */; };
@@ -14,11 +18,15 @@
 		9CB046F520FF12CB00FCC181 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CB046F420FF12CB00FCC181 /* Assets.xcassets */; };
 		9CB046F820FF12CB00FCC181 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CB046F620FF12CB00FCC181 /* LaunchScreen.storyboard */; };
 		9CB046FB20FF12CB00FCC181 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB046FA20FF12CB00FCC181 /* main.m */; };
-		9CB0470320FF14D000FCC181 /* CustomPublicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB0470220FF14D000FCC181 /* CustomPublicCell.m */; };
-		9CB0470620FF185F00FCC181 /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB0470520FF185F00FCC181 /* DataModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9C2B91222124145C009777A8 /* BetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BetViewController.h; sourceTree = "<group>"; };
+		9C2B91232124145C009777A8 /* BetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BetViewController.m; sourceTree = "<group>"; };
+		9C2B91242124145C009777A8 /* BetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BetViewController.xib; sourceTree = "<group>"; };
+		9C2B912721241871009777A8 /* PDFViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFViewController.h; sourceTree = "<group>"; };
+		9C2B912821241871009777A8 /* PDFViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDFViewController.m; sourceTree = "<group>"; };
+		9C2B912921241871009777A8 /* PDFViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PDFViewController.xib; sourceTree = "<group>"; };
 		9C3C779F21008C8800C33569 /* ContentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContentViewController.h; sourceTree = "<group>"; };
 		9C3C77A021008C8800C33569 /* ContentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContentViewController.m; sourceTree = "<group>"; };
 		9CB046E820FF12C800FCC181 /* codeMix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = codeMix.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -31,10 +39,6 @@
 		9CB046F720FF12CB00FCC181 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9CB046F920FF12CB00FCC181 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CB046FA20FF12CB00FCC181 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		9CB0470120FF14D000FCC181 /* CustomPublicCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomPublicCell.h; sourceTree = "<group>"; };
-		9CB0470220FF14D000FCC181 /* CustomPublicCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomPublicCell.m; sourceTree = "<group>"; };
-		9CB0470420FF185F00FCC181 /* DataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataModel.h; sourceTree = "<group>"; };
-		9CB0470520FF185F00FCC181 /* DataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,12 +75,14 @@
 				9CB046EC20FF12C800FCC181 /* AppDelegate.m */,
 				9CB046EE20FF12C800FCC181 /* ViewController.h */,
 				9CB046EF20FF12C800FCC181 /* ViewController.m */,
+				9C2B91222124145C009777A8 /* BetViewController.h */,
+				9C2B91232124145C009777A8 /* BetViewController.m */,
+				9C2B91242124145C009777A8 /* BetViewController.xib */,
+				9C2B912721241871009777A8 /* PDFViewController.h */,
+				9C2B912821241871009777A8 /* PDFViewController.m */,
+				9C2B912921241871009777A8 /* PDFViewController.xib */,
 				9C3C779F21008C8800C33569 /* ContentViewController.h */,
 				9C3C77A021008C8800C33569 /* ContentViewController.m */,
-				9CB0470120FF14D000FCC181 /* CustomPublicCell.h */,
-				9CB0470220FF14D000FCC181 /* CustomPublicCell.m */,
-				9CB0470420FF185F00FCC181 /* DataModel.h */,
-				9CB0470520FF185F00FCC181 /* DataModel.m */,
 				9CB046F120FF12C800FCC181 /* Main.storyboard */,
 				9CB046F420FF12CB00FCC181 /* Assets.xcassets */,
 				9CB046F620FF12CB00FCC181 /* LaunchScreen.storyboard */,
@@ -143,6 +149,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C2B912B21241871009777A8 /* PDFViewController.xib in Resources */,
+				9C2B91262124145C009777A8 /* BetViewController.xib in Resources */,
 				9CB046F820FF12CB00FCC181 /* LaunchScreen.storyboard in Resources */,
 				9CB046F520FF12CB00FCC181 /* Assets.xcassets in Resources */,
 				9CB046F320FF12C800FCC181 /* Main.storyboard in Resources */,
@@ -157,11 +165,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CB046F020FF12C800FCC181 /* ViewController.m in Sources */,
-				9CB0470620FF185F00FCC181 /* DataModel.m in Sources */,
+				9C2B91252124145C009777A8 /* BetViewController.m in Sources */,
 				9C3C77A121008C8800C33569 /* ContentViewController.m in Sources */,
 				9CB046FB20FF12CB00FCC181 /* main.m in Sources */,
 				9CB046ED20FF12C800FCC181 /* AppDelegate.m in Sources */,
-				9CB0470320FF14D000FCC181 /* CustomPublicCell.m in Sources */,
+				9C2B912A21241871009777A8 /* PDFViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

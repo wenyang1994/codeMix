@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "BetViewController.h"
+#import "PDFViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -23,8 +25,17 @@
     
     ViewController *mainView = [[ViewController alloc]init];
     mainView.tabBarItem.title = @"道德经";
-    [tabVC addChildViewController:mainView ];
     
+    BetViewController *betView = [[BetViewController alloc]init];
+    betView.tabBarItem.title = @"竞猜";
+    
+    PDFViewController *pdfView = [[PDFViewController alloc]init];
+    pdfView.tabBarItem.title = @"查看";
+    
+    [tabVC addChildViewController:mainView];
+    [tabVC addChildViewController:betView];
+    [tabVC addChildViewController:pdfView];
+    tabVC.selectedIndex = 1;
     UINavigationController *navi = [[UINavigationController alloc]initWithRootViewController:tabVC];
     
     [self.window setRootViewController:navi];

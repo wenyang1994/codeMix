@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _textView = [UITextView new];
-    _textView.frame = self.view.bounds;
+    _textView.frame = CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height-64);
     //设置是否可以编辑
     _textView.editable = YES;
     //设置代理
