@@ -39,7 +39,6 @@
     //UITextView 下得键盘中return 表示换行
     [self.view addSubview:_textView];
     
-    
     // Do any additional setup after loading the view.
 }
 

@@ -18,6 +18,9 @@
 @synthesize thridResult = thridResult_;
 - (void)viewDidLoad {
     [super viewDidLoad];
+    firstResult_.enabled = NO;
+    secondResult_.enabled = NO;
+    thridResult_.enabled = NO;
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -58,12 +61,10 @@
                 NSLog(@"radom%i = %i",betNum,random);
             }
             
-            
         }
         if(sum==3){
             break;
         }
-        
     }
 }
 

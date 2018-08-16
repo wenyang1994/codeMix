@@ -88,6 +88,9 @@
     
     NSURLSessionDataTask *dataTask = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error){
         
+        if(!data){
+            return;
+        }
         result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
         
         CFRunLoopStop(CFRunLoopGetMain());
@@ -104,12 +107,17 @@
 - (IBAction)postAction:(id)sender {
     if(![userName_.text isEqualToString:@""]){
         NSDictionary *dic = [self getChapterInfo:userName_.text];
-        NSDictionary *result = [self getPersonInfo:dic[@"userId"]];
+        if(dic){
+            NSDictionary *result = [self getPersonInfo:dic[@"userId"]];
+            
+            userId_.text = result[@"userId"];
+            age_.text = [NSString stringWithFormat:@"%@",result[@"age"]];
+            salary_.text = result[@"salary"];
+            tel_.text = result[@"telephone"];
+        }else{
+            userName_.text = @"";
+        }
         
-        userId_.text = result[@"userId"];
-        age_.text = [NSString stringWithFormat:@"%@",result[@"age"]];
-        salary_.text = result[@"salary"];
-        tel_.text = result[@"telephone"];
     }
     
     [self.view endEditing:YES];
