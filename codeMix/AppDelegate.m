@@ -10,6 +10,8 @@
 #import "ViewController.h"
 #import "BetViewController.h"
 #import "PDFViewController.h"
+#import "MapViewController.h"
+#import "WebViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -32,9 +34,17 @@
     PDFViewController *pdfView = [[PDFViewController alloc]init];
     pdfView.tabBarItem.title = @"查看";
     
+    MapViewController *mapView = [[MapViewController alloc]init];
+    mapView.tabBarItem.title = @"地图";
+    
+    WebViewController *webView = [[WebViewController alloc]init];
+    webView.tabBarItem.title = @"Json";
+    
     [tabVC addChildViewController:mainView];
     [tabVC addChildViewController:betView];
     [tabVC addChildViewController:pdfView];
+    [tabVC addChildViewController:webView];
+    [tabVC addChildViewController:mapView];
     tabVC.selectedIndex = 1;
     UINavigationController *navi = [[UINavigationController alloc]initWithRootViewController:tabVC];
     
