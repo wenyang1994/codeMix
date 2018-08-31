@@ -255,6 +255,11 @@
     
 }
 
+-(void)viewWillDisappear:(BOOL)animated{\
+    [_locationManager stopUpdatingHeading];
+    [_mapView removeFromSuperview];
+}
+
 //覆盖物的回调方法
 
 -(MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id)overlay{

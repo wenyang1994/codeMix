@@ -52,11 +52,14 @@
         __block NSDictionary *result;
         NSURLSessionDataTask *dataTask = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error){
             
-            NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+            if(error==nil){
+                NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+                
+                result = dic;
+                
+                CFRunLoopStop(CFRunLoopGetMain());
+            }
             
-            result = dic;
-            
-            CFRunLoopStop(CFRunLoopGetMain());
         }];
         
         [dataTask resume];

@@ -15,6 +15,8 @@
 		9C36343C213529A8003EACA6 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C36343A213529A8003EACA6 /* WebViewController.xib */; };
 		9C36343E21354A6B003EACA6 /* content.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C36343D21354A6B003EACA6 /* content.json */; };
 		9C3C77A121008C8800C33569 /* ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3C77A021008C8800C33569 /* ContentViewController.m */; };
+		9C420EDA2139190C00EFCB91 /* AlgViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C420ED82139190C00EFCB91 /* AlgViewController.m */; };
+		9C420EDB2139190C00EFCB91 /* AlgViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C420ED92139190C00EFCB91 /* AlgViewController.xib */; };
 		9C6F9EA1212BEC3B004DE3D5 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6F9EA0212BEC3B004DE3D5 /* MapViewController.m */; };
 		9CB046ED20FF12C800FCC181 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB046EC20FF12C800FCC181 /* AppDelegate.m */; };
 		9CB046F020FF12C800FCC181 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB046EF20FF12C800FCC181 /* ViewController.m */; };
@@ -37,6 +39,9 @@
 		9C36343D21354A6B003EACA6 /* content.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = content.json; sourceTree = "<group>"; };
 		9C3C779F21008C8800C33569 /* ContentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContentViewController.h; sourceTree = "<group>"; };
 		9C3C77A021008C8800C33569 /* ContentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContentViewController.m; sourceTree = "<group>"; };
+		9C420ED72139190C00EFCB91 /* AlgViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlgViewController.h; sourceTree = "<group>"; };
+		9C420ED82139190C00EFCB91 /* AlgViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlgViewController.m; sourceTree = "<group>"; };
+		9C420ED92139190C00EFCB91 /* AlgViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlgViewController.xib; sourceTree = "<group>"; };
 		9C6F9E9F212BEC3B004DE3D5 /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		9C6F9EA0212BEC3B004DE3D5 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		9CB046E820FF12C800FCC181 /* codeMix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = codeMix.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +103,9 @@
 				9C363438213529A8003EACA6 /* WebViewController.h */,
 				9C363439213529A8003EACA6 /* WebViewController.m */,
 				9C36343A213529A8003EACA6 /* WebViewController.xib */,
+				9C420ED72139190C00EFCB91 /* AlgViewController.h */,
+				9C420ED82139190C00EFCB91 /* AlgViewController.m */,
+				9C420ED92139190C00EFCB91 /* AlgViewController.xib */,
 				9CB046F120FF12C800FCC181 /* Main.storyboard */,
 				9CB046F420FF12CB00FCC181 /* Assets.xcassets */,
 				9CB046F620FF12CB00FCC181 /* LaunchScreen.storyboard */,
@@ -166,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C36343E21354A6B003EACA6 /* content.json in Resources */,
+				9C420EDB2139190C00EFCB91 /* AlgViewController.xib in Resources */,
 				9C2B912B21241871009777A8 /* PDFViewController.xib in Resources */,
 				9C2B91262124145C009777A8 /* BetViewController.xib in Resources */,
 				9CB046F820FF12CB00FCC181 /* LaunchScreen.storyboard in Resources */,
@@ -186,6 +195,7 @@
 				9C2B91252124145C009777A8 /* BetViewController.m in Sources */,
 				9C3C77A121008C8800C33569 /* ContentViewController.m in Sources */,
 				9C36343B213529A8003EACA6 /* WebViewController.m in Sources */,
+				9C420EDA2139190C00EFCB91 /* AlgViewController.m in Sources */,
 				9CB046FB20FF12CB00FCC181 /* main.m in Sources */,
 				9CB046ED20FF12C800FCC181 /* AppDelegate.m in Sources */,
 				9C2B912A21241871009777A8 /* PDFViewController.m in Sources */,

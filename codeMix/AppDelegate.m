@@ -12,6 +12,7 @@
 #import "PDFViewController.h"
 #import "MapViewController.h"
 #import "WebViewController.h"
+#import "AlgViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -40,11 +41,15 @@
     WebViewController *webView = [[WebViewController alloc]init];
     webView.tabBarItem.title = @"Json";
     
+    AlgViewController *algView = [[AlgViewController alloc]init];
+    algView.tabBarItem.title = @"算法";
+    
     [tabVC addChildViewController:mainView];
     [tabVC addChildViewController:betView];
     [tabVC addChildViewController:pdfView];
     [tabVC addChildViewController:webView];
-    [tabVC addChildViewController:mapView];
+    [tabVC addChildViewController:algView];
+//    [tabVC addChildViewController:mapView];
     tabVC.selectedIndex = 1;
     UINavigationController *navi = [[UINavigationController alloc]initWithRootViewController:tabVC];
     
